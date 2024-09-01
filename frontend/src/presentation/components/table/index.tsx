@@ -39,10 +39,10 @@ export const TableComponent: FC<Props> = ({ data }: Props) => {
                 <TableHead>
                     <TableRow>
                         <TableCell>Id</TableCell>
-                        <TableCell align="right">Name</TableCell>
-                        <TableCell align="right">amount</TableCell>
+                        <TableCell align="right">Nome</TableCell>
+                        <TableCell align="right">Quantia</TableCell>
                         <TableCell align="right">Status</TableCell>
-                        <TableCell align="right">Due</TableCell>
+                        <TableCell align="right">Data</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
