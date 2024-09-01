@@ -1,0 +1,30 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #308815;
+    display: flex;
+    justify-content: center;
+
+    .items {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        .item {
+            min-width: 120px;
+            padding: 8px 20px;
+            color: #f5f5f5;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            border-radius: 4px;
+        }
+
+        .active {
+            background-color: #d2d2d260;
+            font-weight: 600;
+        }
+    }
+}
