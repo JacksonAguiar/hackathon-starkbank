@@ -8,6 +8,7 @@ Nossa solução de IA transforma o gerenciamento de fluxos de caixa para pequena
 ├── 📁 backend
 ├── 📁 frontend
 ├── 📁 model
+├── 📁 starkbank_service
 ├── 📝 README.md
 ```
 
