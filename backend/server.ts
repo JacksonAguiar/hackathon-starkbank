@@ -2,11 +2,16 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 import express, { Request, Response } from "express";
 
+import cors from 'cors'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 import * as fs from "fs";
 import * as path from "path";
 
 const googleAI = new GoogleGenerativeAI(
-  "AIzaSyCGpZyJNMvGiNR6EDqt4ojycvKNEzRVHhc"
+  process.env.GOOGLE_KEY as string
 );
 var geminiConfig = {
   temperature: 0,
@@ -70,6 +75,8 @@ const generate = async () => {
 
 const app = express();
 const port = 3000;
+
+app.use(cors())
 
 app.get("/analyse", async (req: Request, res: Response) => {
   var result = await generate();
