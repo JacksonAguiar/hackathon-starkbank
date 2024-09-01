@@ -32,7 +32,7 @@ export const Sidebar: FC<Props> = ({ active }: Props) => {
             <div className={styles.items}>
                 {
                     navigation.map((nav, index) => {
-                        return <Link to={nav.url} className={`${active == index && styles.active} ${styles.item}`}>
+                        return <Link to={nav.url} className={`${active == index && styles.active} ${styles.item}`} key={index}>
                             {nav.title}
                         </Link>
                     })
