@@ -33,6 +33,7 @@ export const Card = () => {
             <Sidebar active={1} />
 
             <div className={styles.container}>
+                <button className={styles.button}>Adicionar</button>
                 <TableComponent data={data} num={3} />
             </div>
         </div>

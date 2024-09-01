@@ -33,6 +33,7 @@ export const Invoice = () => {
             <Sidebar active={3} />
 
             <div className={styles.container}>
+                <button className={styles.button}>Adicionar</button>
                 <TableComponent data={data}/>
             </div>
         </div>
