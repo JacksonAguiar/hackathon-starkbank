@@ -52,21 +52,6 @@ export const Home = () => {
         setEnterParameters(false);
     };
 
-    useEffect(() => {
-        // const getData = async () => {
-        //   const cache = localStorage.getItem("data");
-        //   if (cache) {
-        //     setData(JSON.parse(cache.replace(/\*/g, "")));
-        //   } else {
-        //     const response = await axios.get("http://localhost:3000/analyse");
-        //     if (response.data) {
-        //       localStorage.setItem("data", JSON.stringify(response.data));
-        //     }
-        //   }
-        // };
-        // getData();
-    }, []);
-
     const moreInfo = (data: any): ReactElement => {
         return (
             <div>
@@ -121,7 +106,6 @@ export const Home = () => {
                                         <div className={styles.bullet}>
                                             <h3>{bullet.title}</h3>
                                             <div className={styles.description}>{data[index]}</div>
-                                            {/* <span>{bullet.description}</span> */}
                                         </div>
                                     </div>
                                 );
@@ -142,7 +126,6 @@ export const Home = () => {
                                 <span className={styles.tag}>Checkup</span>
                                 <h3>{checkup.status.toUpperCase()}</h3>
                                 <span>{data[5].replace("Negativo", "")}</span>
-                                {/* <span>{checkup.text}</span> */}
                             </div>
                         </div>
                     ) : (
