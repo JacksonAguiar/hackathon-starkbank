@@ -78,7 +78,8 @@ const port = 3000;
 
 app.use(cors())
 
-app.get("/analyse", async (req: Request, res: Response) => {
+app.post("/analyse", async (req: Request, res: Response) => {
+  console.log(req.body);
   var result = await generate();
   res.json(result);
 });
