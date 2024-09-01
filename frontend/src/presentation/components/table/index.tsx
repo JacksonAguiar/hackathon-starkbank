@@ -28,18 +28,25 @@ const createData = (
     return { name, id, amount, status, due };
 }
 
-let rows = [
+const rows = [
     createData('Felipe Saadi', 1, 32000, "Pago", "29/08/2024"),
     createData('Paulo Brito', 2, 30000, "Pago", "17/05/2024")
 ];
 
-export const TableComponent: FC<Props> = ({ data, num = 1 }: Props) => {
-    if (num == 2) {
-        rows = [
-            createData('Norma Queiroz', 1, 50000, "Pago", "29/08/2024"),
-            createData('Beatriz G.', 2, 22000, "Pendente", "17/05/2024")
-        ];
-    }
+const rows2 = [
+    createData('Norma Queiroz', 1, 50000, "Pago", "29/08/2024"),
+    createData('Beatriz G.', 2, 22000, "Pendente", "17/05/2024")
+]
+
+const rows3 = [
+    createData('Nicholas Xavier', 1, 50000, "Pago", "29/08/2024"),
+    createData('Veronica R.', 2, 22000, "Pendente", "17/05/2024")
+]
+
+export const TableComponent: FC<Props> = ({ data, num }: Props) => {
+    num == 2 ? data = rows2 : data = rows 
+    num == 3 ? data = rows3 : null
+
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -53,7 +60,7 @@ export const TableComponent: FC<Props> = ({ data, num = 1 }: Props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
+                    {data.map((row) => (
                         <TableRow
                             key={row.id}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
