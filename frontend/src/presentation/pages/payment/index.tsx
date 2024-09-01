@@ -32,7 +32,7 @@ export const Payment = () => {
             <Sidebar active={2} />
 
             <div className={styles.container}>
-                <TableComponent data={data}/>
+                <TableComponent data={data} num={2}/>
             </div>
         </div>
     )

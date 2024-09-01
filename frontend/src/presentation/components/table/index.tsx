@@ -14,7 +14,8 @@ type Props = {
         amount: number,
         status: string,
         due: string
-    }[]
+    }[],
+    num?: number
 }
 
 const createData = (
@@ -27,12 +28,18 @@ const createData = (
     return { name, id, amount, status, due };
 }
 
-const rows = [
+let rows = [
     createData('Felipe Saadi', 1, 32000, "Pago", "29/08/2024"),
-    createData('Paulo Brito', 1, 30000, "Pago", "17/05/2024")
+    createData('Paulo Brito', 2, 30000, "Pago", "17/05/2024")
 ];
 
-export const TableComponent: FC<Props> = ({ data }: Props) => {
+export const TableComponent: FC<Props> = ({ data, num = 1 }: Props) => {
+    if (num == 2) {
+        rows = [
+            createData('Norma Queiroz', 1, 50000, "Pago", "29/08/2024"),
+            createData('Beatriz G.', 2, 22000, "Pendente", "17/05/2024")
+        ];
+    }
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
