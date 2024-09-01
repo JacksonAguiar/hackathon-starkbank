@@ -1,4 +1,4 @@
-# Jarvis.AI - Solução Leprechaum
+# Jarvis.AI - Solução Leprechaun
 
 ## Descrição:
 Nossa solução de IA transforma o gerenciamento de fluxos de caixa para pequenas e médias empresas. Através de tecnologia avançada, nossa plataforma analisa automaticamente seus dados financeiros, oferecendo insights claros e acionáveis para otimizar o fluxo de caixa.
